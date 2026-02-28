@@ -15,7 +15,7 @@ function ShoppingCard({ clothesData, onAdd, onRemove, quantity }) {
                     <div className='fs-5'>
                         {quantity}
                     </div>
-                    <button className='btn btn-primary fw-bold' onclick={onAdd}>
+                    <button className='btn btn-primary fw-bold' onClick={onAdd}>
                         +
                     </button>
                 </div>
