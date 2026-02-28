@@ -2,6 +2,8 @@ import './App.css'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import ShoppingCard from './components/ShoppingCard';
+import { clothesDataList } from './data/clothes';
 
 
 function App() {
@@ -15,7 +17,21 @@ function App() {
       </div>
       {/* Card Holder */}
       <div className="container bg-light rounded-3">
-        Card Holder
+        <div className="row">
+          {
+            clothesDataList.map((data) => {
+              return  <div className="col-3" key={data.id}>
+              <ShoppingCard 
+                clothesData={data}
+                onAdd={() => {}}
+                onRemove={() => {}}
+                quantity={2}
+              />
+            </div>
+            })
+          }
+
+        </div>
       </div>
     </div>
   )
